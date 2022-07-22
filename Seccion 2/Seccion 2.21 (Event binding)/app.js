@@ -5,6 +5,15 @@ const app = Vue.createApp({
       name: ''
     };
   },
+  computed:{
+    fullName(){
+      if(this.name === ""){
+        return "";
+      }else{
+        return `${this.name} Martinez`;
+      }
+    }
+  },
   methods: {
     add(){
       this.counter++;
@@ -17,6 +26,9 @@ const app = Vue.createApp({
     },
     submitForm(){
       alert("Enviado");
+    }, 
+    resetInput(){
+      this.name = "";
     }
   }
 });

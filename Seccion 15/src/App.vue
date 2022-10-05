@@ -3,14 +3,19 @@
     <h3>{{ counter }}</h3>
     <button @click="add">Add 10</button>
   </base-container>
+  <base-container title="Auth">
+    <UserAuth></UserAuth>
+  </base-container>  
 </template>
 
 <script>
 import BaseContainer from './components/BaseContainer.vue';
+import UserAuth from "./components/UserAuth.vue"
 
 export default {
   components: {
     BaseContainer,
+    UserAuth
   },
   computed:{
     counter(){
